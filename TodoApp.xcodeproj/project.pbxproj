@@ -14,6 +14,13 @@
 		7829ED352A24EB0900222E11 /* TodoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED342A24EB0900222E11 /* TodoAppTests.swift */; };
 		7829ED3F2A24EB0900222E11 /* TodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED3E2A24EB0900222E11 /* TodoAppUITests.swift */; };
 		7829ED412A24EB0900222E11 /* TodoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED402A24EB0900222E11 /* TodoAppUITestsLaunchTests.swift */; };
+		7829ED522A24EC4000222E11 /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED512A24EC4000222E11 /* TodoModel.swift */; };
+		7829ED542A24ED1400222E11 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED532A24ED1400222E11 /* TodoListViewModel.swift */; };
+		7829ED562A24EEF800222E11 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED552A24EEF800222E11 /* TodoListView.swift */; };
+		7829ED582A24F05700222E11 /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED572A24F05700222E11 /* AddTodoViewModel.swift */; };
+		7829ED5A2A24F0E100222E11 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED592A24F0E100222E11 /* AddTodoView.swift */; };
+		7829ED5C2A24F3FD00222E11 /* TodoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829ED5B2A24F3FD00222E11 /* TodoListRowView.swift */; };
+		7829ED5E2A24FA3000222E11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7829ED5D2A24FA3000222E11 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,14 @@
 		7829ED3A2A24EB0900222E11 /* TodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7829ED3E2A24EB0900222E11 /* TodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITests.swift; sourceTree = "<group>"; };
 		7829ED402A24EB0900222E11 /* TodoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7829ED4D2A24EB8A00222E11 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7829ED512A24EC4000222E11 /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		7829ED532A24ED1400222E11 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		7829ED552A24EEF800222E11 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		7829ED572A24F05700222E11 /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
+		7829ED592A24F0E100222E11 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		7829ED5B2A24F3FD00222E11 /* TodoListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListRowView.swift; sourceTree = "<group>"; };
+		7829ED5D2A24FA3000222E11 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +90,8 @@
 		7829ED162A24EB0800222E11 = {
 			isa = PBXGroup;
 			children = (
+				7829ED4D2A24EB8A00222E11 /* README.md */,
+				7829ED5D2A24FA3000222E11 /* .gitignore */,
 				7829ED212A24EB0800222E11 /* TodoApp */,
 				7829ED332A24EB0900222E11 /* TodoAppTests */,
 				7829ED3D2A24EB0900222E11 /* TodoAppUITests */,
@@ -95,6 +112,9 @@
 		7829ED212A24EB0800222E11 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				7829ED502A24EC2400222E11 /* Views */,
+				7829ED4F2A24EC1B00222E11 /* ViewModels */,
+				7829ED4E2A24EC1500222E11 /* Models */,
 				7829ED222A24EB0800222E11 /* TodoAppApp.swift */,
 				7829ED242A24EB0800222E11 /* ContentView.swift */,
 				7829ED262A24EB0900222E11 /* Assets.xcassets */,
@@ -127,6 +147,33 @@
 				7829ED402A24EB0900222E11 /* TodoAppUITestsLaunchTests.swift */,
 			);
 			path = TodoAppUITests;
+			sourceTree = "<group>";
+		};
+		7829ED4E2A24EC1500222E11 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7829ED512A24EC4000222E11 /* TodoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7829ED4F2A24EC1B00222E11 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7829ED532A24ED1400222E11 /* TodoListViewModel.swift */,
+				7829ED572A24F05700222E11 /* AddTodoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7829ED502A24EC2400222E11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7829ED552A24EEF800222E11 /* TodoListView.swift */,
+				7829ED592A24F0E100222E11 /* AddTodoView.swift */,
+				7829ED5B2A24F3FD00222E11 /* TodoListRowView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7829ED2A2A24EB0900222E11 /* Preview Assets.xcassets in Resources */,
+				7829ED5E2A24FA3000222E11 /* .gitignore in Resources */,
 				7829ED272A24EB0900222E11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7829ED542A24ED1400222E11 /* TodoListViewModel.swift in Sources */,
+				7829ED522A24EC4000222E11 /* TodoModel.swift in Sources */,
+				7829ED5A2A24F0E100222E11 /* AddTodoView.swift in Sources */,
+				7829ED562A24EEF800222E11 /* TodoListView.swift in Sources */,
 				7829ED252A24EB0800222E11 /* ContentView.swift in Sources */,
+				7829ED5C2A24F3FD00222E11 /* TodoListRowView.swift in Sources */,
+				7829ED582A24F05700222E11 /* AddTodoViewModel.swift in Sources */,
 				7829ED232A24EB0800222E11 /* TodoAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,8 +484,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kou-Isaka.TodoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -455,8 +513,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kou-Isaka.TodoApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
