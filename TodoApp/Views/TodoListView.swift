@@ -10,21 +10,26 @@ import SwiftUI
 struct TodoListView: View {
     @StateObject var todoListVM = TodoListViewModel()
     var body: some View {
-        List{
-            ForEach(todoListVM.todoList){
-                item in
-                Text(item.title)
-            }.onDelete(perform:todoListVM.onDelete)
-                    .onMove(perform:todoListVM.onMove)
-        }.navigationTitle("Todo List")
-                    .navigationBarItems(leading: EditButton(), trailing:NavigationLink(destination:{
-            AddTodoView{todo in
-                todoListVM.onSave(item:todo)
-            }
-        },label:{
-            Text("Add items")
-        }))
-    }
+            List{
+                ForEach(todoListVM.todoList) {item in
+                    TodoListRowView(
+                            todo: item,
+                            onCompletedToggle: {
+                                todoListVM.updateItem(item: item.onCompletedToggle())
+                        }
+                    )
+                }
+                    .onDelete(perform: todoListVM.onDelete)
+                    .onMove(perform: todoListVM.onMove)
+            }.navigationTitle("Todo List")
+                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: {
+                    AddTodoView { todo in
+                        todoListVM.onSave(item: todo)
+                    }
+                }, label: {
+                  Text("Add items")
+                }))
+        }
                                 }
                                 
 struct TodoListView_Previews: PreviewProvider {
