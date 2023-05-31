@@ -28,13 +28,13 @@ struct AddTodoView: View {
             }label:{
                 Text("Save").foregroundColor(.white).font(.headline).frame(height: 56).frame(maxWidth:.infinity).background(.primary)
             }
-        }.navigationTitle("Add Todo")
+        }.navigationTitle("Add Todo").padding(10)
     }
     
     func onSaveClick(){
         let todo: TodoModel = addTodoVM.getTodo(id: id)
             onSave(todo)
-            presentationMode.wrappedValue.dismiss()
+        presentationMode.wrappedValue.dismiss()
         }
     }
 
